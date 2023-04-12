@@ -1,0 +1,39 @@
+\documentclass[a4paper]{article}
+
+% Packages für Umlaute und Formeln
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Schmale Ränder
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+% Inhaltsverzeichnis, Seitennummerierung, Datum und Autorenname
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\pagenumbering{arabic}
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+\author{Vorname Nachname}
+\date{\today}
+
+\begin{document}
+	
+	% Titel und Autor
+	\title{Titel des Berichts}
+	\author{Vorname Nachname}
+	\date{\today}
+	\maketitle
+	
+	% Inhaltsverzeichnis
+	\tableofcontents
+	
+	% Seiten einfügen
+	\input{Einleitung.tex}
+	\input{Hauptteil.tex}
+	\input{Schlussfolgerung.tex}
+	\input{Literatur.tex}
+	
+\end{document}
